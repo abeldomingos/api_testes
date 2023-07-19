@@ -25,4 +25,6 @@ Route::get("data", [dummyAPI::class,'getData']);
 
 Route::get("list/{id?}", [DeviceController::class, "list"]);
 
-Route::post("add", [ClienteController::class, "add"]);
+Route::post("add", [ClienteController::class, "add"]); 
+
+Route::put('update', [ClienteController::class, "update"]);

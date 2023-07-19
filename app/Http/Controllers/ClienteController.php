@@ -29,7 +29,23 @@ class ClienteController extends Controller
     }
 
     //Função actualizar dados
-    function update() {
-        return ["Resultado"=>"Dado alterado com sucesso"];
+    function update(Request $req) {
+
+        $cliente = new Cliente();
+        $cliente->nome=$req->nome;
+        $cliente->email=$req->email;
+        $cliente->endereco=$req->endereco;
+        $cliente->telefone=$req->telefone;
+        $cliente->sexo=$req->sexo;
+
+        $result=$cliente->save();
+
+        if($result){
+            return ["Resultado"=>"Dado Alterado com sucesso"];
+
+        }else{
+            return ["Resultado"=>"Falha ao alterar Dados"];
+        }
+
     }
 }

@@ -31,7 +31,7 @@ class ClienteController extends Controller
     //Função actualizar dados
     function update(Request $req) {
 
-        $cliente = new Cliente();
+        $cliente = Cliente::find($req->id);
         $cliente->nome=$req->nome;
         $cliente->email=$req->email;
         $cliente->endereco=$req->endereco;

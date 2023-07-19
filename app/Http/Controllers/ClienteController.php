@@ -27,4 +27,9 @@ class ClienteController extends Controller
         }
 
     }
+
+    //Função actualizar dados
+    function update() {
+        return ["Resultado"=>"Dado alterado com sucesso"];
+    }
 }

@@ -7,7 +7,7 @@ use App\Models\Cliente;
 
 class ClienteController extends Controller
 {
-    //
+    //Função para adicionar dados no BD
     function add(Request $req){
 
         $cliente = new Cliente();
@@ -25,8 +25,6 @@ class ClienteController extends Controller
         }else{
             return ["Resultado"=>"Falha na operação"];
         }
-
-      
 
     }
 }

@@ -28,3 +28,5 @@ Route::get("list/{id?}", [DeviceController::class, "list"]);
 Route::post("add", [ClienteController::class, "add"]); 
 
 Route::put('update', [ClienteController::class, "update"]);
+
+Route::get('search', [ClienteController::class, 'search']);

@@ -48,4 +48,9 @@ class ClienteController extends Controller
         }
 
     }
+
+    //Metodo de pesquisar por meio de nome
+    function search($nome){
+        return Cliente::where("nome", $nome)->get();
+    }
 }

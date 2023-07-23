@@ -49,9 +49,9 @@ class ClienteController extends Controller
 
     }
 
-    //Metodo de pesquisar por meio de nome
+    //Metodo de pesquisar por meio de nome e da inicial de um caracter
     function search($nome){
-        return Cliente::where("nome",$nome)->get();
+        return Cliente::where("nome","like","%".$nome."%")->get();
     }
 
     //Função deletar

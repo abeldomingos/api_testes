@@ -51,6 +51,20 @@ class ClienteController extends Controller
 
     //Metodo de pesquisar por meio de nome
     function search($nome){
-        return Cliente::where("nome", $nome)->get();
+        return Cliente::where("nome",$nome)->get();
+    }
+
+    //Função deletar
+    function delete($id){
+
+        $cliente= Cliente::find($id);
+        $result=$cliente->delete();
+
+        if($result){
+            return ["Resultado"=>"Deletado com sucesso!"];
+        }else{
+            return ["Resultado"=>"Falha ao deletar cliente"];
+        }
+       
     }
 }

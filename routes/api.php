@@ -29,4 +29,6 @@ Route::post("add", [ClienteController::class, "add"]);
 
 Route::put('update', [ClienteController::class, "update"]);
 
-Route::get('search', [ClienteController::class, 'search']);
+Route::delete("delete/{id}", [ClienteController::class, 'delete']);
+
+Route::get('search/{nome}', [ClienteController::class, 'search']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use Validator;
 
 class ClienteController extends Controller
 {
@@ -66,5 +67,10 @@ class ClienteController extends Controller
             return ["Resultado"=>"Falha ao deletar cliente"];
         }
        
+    }
+
+    function testarDados(Request $req){
+        return ["x"=>"y"];
+
     }
 }

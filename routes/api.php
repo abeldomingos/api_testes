@@ -32,3 +32,5 @@ Route::put('update', [ClienteController::class, "update"]);
 Route::delete("delete/{id}", [ClienteController::class, 'delete']);
 
 Route::get('search/{nome}', [ClienteController::class, 'search']);
+
+Route::post('save',[ClienteController::class,'testarDados']);
